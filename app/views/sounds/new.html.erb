@@ -1,0 +1,54 @@
+<% form_for(:sound, :html => {:multipart => true}, :url => sounds_path) do |f| %>
+
+<div class="column prepend-2 span-20 append-2">
+	<%= error_messages_for :sound %>
+	<div class="column span-9 append-1">
+		<p>
+			<label for="sound_title"><%= "Title"[:title] %> (*)</label>
+			<%= f.text_field(:title, :size => 32) %>
+		</p>
+		<p>
+			<label for="sound_tags"><%= "Tags (comma separated)"[:tags_form] %></label>
+			<%= f.text_field(:tags, :size => 32) %> 
+			<div class="auto_complete" id="sound_tags_auto_complete"></div>
+			<%= auto_complete_field :sound_tags, :url=> { :controller => 'tags', :action => 'auto_complete_for_tag_name' }, :tokens => ',' %>
+		</p>
+		<p class="quiet">
+			(*) <%= "Required field"[:required] %>
+		</p>
+	</div>
+	<div class="column span-10 last">
+		<p>
+			<label for="sound_uploaded_file"><%= "Choose the file"[:choose_file] %> (*)</label>
+			<%= f.file_field(:uploaded_file) %>
+		</p>
+		
+		<label for="sound_keeper" class="keeper">Please ignore this field</label>
+		<%= text_field_tag 'sound_keep_out', nil, :class => 'keeper' %>
+		
+		<p>
+			<label for="sound_recorded_at_3i"><%= "Date (and approximate time) of recording"[:date_time] %> (*)</label>
+			<%= f.datetime_select(:recorded_at, :discard_minute => true, :start_year => 2007) %>
+		</p>
+	</div>
+</div>
+<div class="column prepend-1 span-22 append-1 centered">
+	<div id="campus_placeholder">
+		<%= render :partial => 'campus' %>
+	</div>
+	<label for="sound_latitude"><%= "OK, now click on the place where the recording took place"[:location] %> (*)</label>
+	<p class="quiet centered">
+		(<%= "you may drag the marker if the selected location is incorrect"[:drag_incorrect] %>)
+		<div id="map_area">
+			<%= draw_input_map %>
+		</div>
+		<%= f.hidden_field(:latitude) %>
+		<%= f.hidden_field(:longitude) %>
+	</p>
+	<p class="centered">
+		<%= submit_tag "Send!"[:send] %>
+	</p>
+</div>
+
+
+<% end %>

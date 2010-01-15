@@ -1,0 +1,21 @@
+<% @pagename = "Ouvir por tags" %>
+<h2><%= "Click on the tag you want to listen"[:click_tag] %></h2>
+
+<div class="column prepend-2 span-20 append-2">
+	<div class="column span-10">
+		<ul id="tag_cloud">
+			<% tag_cloud @tags, %w(nube1 nube2 nube3 nube4 nube5 nube6) do |id, name, css_class| %>
+				<li><%= link_to_remote("#{name}", {:url => {:action => 'play_tag', :id => id}, :update => 'playlist'}, :class => css_class) %></li>
+			<% end %>
+		</ul>
+			
+	</div>
+	<div class="column span-10 last">
+		<div id="playlist">
+			<% unless @tag.nil? then 
+				@playlist = "#{@tag.id}" %>
+				<%= render :partial => 'playlist' %>
+			<% end %>
+		</div>
+	</div>
+</div>

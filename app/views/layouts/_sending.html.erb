@@ -1,0 +1,60 @@
+<script type="text/javascript">
+//<![CDATA[
+
+// Receives a GLatLng and changes the values for the hidden fields
+function changeSoundCoordinates(point) {
+	document.getElementById("sound_latitude").value = point.lat();
+	document.getElementById("sound_longitude").value = point.lng();
+}
+
+function addMarker(map, point) {
+	// Create and add marker to the map
+	soundMarker = new GMarker(point, {draggable: true, autoPan: false});
+	map.addOverlay(soundMarker);
+	
+	// Add listener to know when the marker's been dragged
+	GEvent.addListener(soundMarker, "dragend", function() { 
+		// Change hidden fields to hold the drop off point
+		changeSoundCoordinates(this.getPoint());
+	});
+}
+
+
+function sendingMap(latitude, longitude, zoom) {
+	if (GBrowserIsCompatible()) {
+		// Map initialization
+		map = new GMap2(document.getElementById("google_map"));
+  		map.setCenter(new GLatLng(latitude, longitude), zoom);
+		map.setMapType(G_SATELLITE_MAP);
+		map.disableDragging();
+		
+  		//map.addControl(new GMapTypeControl());
+  		//map.addControl(new GLargeMapControl());
+		
+		// Flag to check the existence of a marker on the map
+		placed_marker = new Boolean();
+
+		if (document.getElementById("sound_latitude").value != "") {
+			placed_marker = true;
+			var prev = new GLatLng(document.getElementById("sound_latitude").value, document.getElementById("sound_longitude").value);
+			addMarker(map, prev);
+		} else {
+			placed_marker = false;
+		}
+		
+		GEvent.addListener(map, "click", function(marker, point) {
+		  	 if (point && placed_marker == false) {
+				// Only one marker can be added to the map
+				placed_marker = true; 
+				// Change hidden fields to hold the clicked point
+				changeSoundCoordinates(point);
+				// Add marker to the map
+				addMarker(map, point);
+			 }
+		});
+	}
+}
+//]]>
+</script>
+
+<div id="google_map" class="sending_map"> </div>

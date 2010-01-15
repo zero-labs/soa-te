@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+valid_tag_1:
+  id: 1
+  name: a test tag
+valid_tag_2:
+  id: 2
+  name: tag2
+valid_tag_3:
+  id: 3
+  name: tag3
+invalid_tag:
+  id: 4

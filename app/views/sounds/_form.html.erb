@@ -1,0 +1,16 @@
+<%= error_messages_for :sound %>
+
+<% form_for(:sound, :url => sounds_path) do |f| %>
+    <div class="label">T&iacute;tulo</div>
+    <%= f.text_field :title, :size => 25 %>
+	
+	<div class="label">Data</div>
+
+    <div class="label">Coment&aacute;rios</div>
+    <%= f.text_area :comment, :rows => 4, :cols => 23 %>
+
+	<div class="label">Tags</div>
+	<%= f.text_field :tags, :size => 25 %>
+
+    <%= submit_tag "Enviar!" %>
+<% end %>

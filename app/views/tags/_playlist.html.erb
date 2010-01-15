@@ -1,0 +1,7 @@
+<h3><%= @tag.name %></h3>
+<%= playlist_tag(@playlist) %>
+
+<p>
+	<br />
+<%= link_to "Edit"[:edit], :action => 'edit', :id => @tag.id if authorized? %>
+</p>

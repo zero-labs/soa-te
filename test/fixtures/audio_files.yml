@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+file_valid_short_path:
+  id: 1
+  filename: test.mp3
+  sound_id: 1
+file_valid_long_path:
+  id: 2
+  filename: '/var/test/test.mp3'
+  sound_id: 2

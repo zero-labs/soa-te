@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+valid_tagging_1:
+  id: 1
+  sound_id: 1
+  tag_id: 1
+valid_tagging_2:
+  id: 2
+  sound_id: 1
+  tag_id: 2
+valid_tagging_3:
+  id: 3
+  sound_id: 1
+  tag_id: 3
+invalid_tagging_w_bad_tag:
+  id: 4
+  sound_id: 1
+  tag_id: 4
+invalid_tagging_w_bad_sound:
+  id: 5
+  sound_id: 2
+  tag_id: 1

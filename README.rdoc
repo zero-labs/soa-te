@@ -1,0 +1,15 @@
+== Soa-te a ISTo
+
+Soa-te a ISTo is a simple web application to collect geo-tagged sounds for Instituto Superior Técnico's  campi, in Lisbon, Portugal.
+
+It allows users to catalogue (through regular and geographical tags) and upload sounds to the app. Sounds may be accessed through the map, by tag or as a randomly-generated "day at the campus".
+
+== Requirements
+
+* uuidtools
+gem install uuidtools
+
+* xspf
+gem install xspf
+
+== Configuration

@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+normal_sound:
+  id: 1
+  title: A test sound
+  latitude: 1.2
+  longitude: 2.1
+sound_without_title:
+  id: 2
+  latitude: 3.2
+  longitude: 1.2

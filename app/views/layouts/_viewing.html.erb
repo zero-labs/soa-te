@@ -1,0 +1,33 @@
+<script type="text/javascript">
+//<![CDATA[
+
+function viewingMap(latitude, longitude, zoom) {
+	if (GBrowserIsCompatible()) {
+		// Map initialization
+		map = new GMap2(document.getElementById("google_map"));
+  		map.setCenter(new GLatLng(latitude, longitude), zoom);
+		map.setMapType(G_SATELLITE_MAP);
+		map.disableDragging();
+		
+		// Populate map with sound markers
+		<%
+			@sounds.each do |s| %>
+				mark = new GMarker(new GLatLng(<%= "#{s.latitude}, #{s.longitude}" %>));
+				mark.bindInfoWindowHtml("<%= render(:partial => '/sounds/info', :locals => {:sound => s}) %>");
+				map.addOverlay(mark);
+			<%
+			end 
+		%>
+		
+		//GEvent.addListener(map, "click", function(marker, point) {
+		//  	 if (marker) {
+		//		marker.openInfoWindowHtml();
+		//	 }
+		//});
+	}
+}
+
+//]]>
+</script>
+
+<div id="google_map" class="viewing_map"> </div>

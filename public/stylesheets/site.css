@@ -1,0 +1,290 @@
+/***** General site styles *****/
+
+/** Elements **/
+
+h1,h2,h3,
+h4,h5,h6 {
+	text-align: center;
+}
+
+label { 
+	font-size: 1em; 
+	display: block;
+	font-weight: bold;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+input { font-size: 1.2em; }
+
+hr { margin-top: 18px;}
+
+/** Classes **/
+
+.centered {
+	text-align: center;
+}
+
+
+
+/***** Sections *****/
+
+/** Flash message **/
+#flash {
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	background: #CCFF66;
+	display: block;
+	padding: 8px 0 8px 0;
+	margin-bottom: 18px;
+}
+
+
+/** Tag cloud **/
+
+ul#tag_cloud {
+	list-style-type: none;
+}
+
+ul#tag_cloud li {
+	display: inline;
+	margin: 18px 15px 0 0;
+}
+
+.nube1 {font-size: 1.0em;}
+.nube2 {font-size: 1.2em;}
+.nube3 {font-size: 1.4em;}
+.nube4 {font-size: 1.6em;}
+.nube5 {font-size: 1.8em;}
+.nube6 {font-size: 2.0em;}
+
+/** Footer **/
+#footer {
+	font-size:11px;
+	text-align: center;
+}
+
+/** Support **/
+.support {
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 18px;
+}
+
+ul.supporters {
+	margin-top: 18px;
+	list-style-type: none;
+	padding-bottom:18px;
+}
+
+ul.supporters li {
+	display: inline;
+}
+
+ul.supporters li a {
+	margin: 0 20px 0px 40px;
+	padding-bottom: 18px;
+	text-decoration: none;
+	float: left;
+	height: 64px;
+}
+
+ul.supporters li a:hover {
+}
+
+a.zero_labs_support  {
+	background: url(/images/zero_labs.png) 0 0 no-repeat;
+	width: 110px;
+}
+
+a:hover.zero_labs_support  {
+	background: url(/images/zero_labs_hover.png) 0 0 no-repeat;
+}
+
+a.radiozero_support  {
+	background: url(/images/radio_zero.png) 0 0 no-repeat;
+	width: 106px;
+}
+
+a:hover.radiozero_support  {
+	background: url(/images/radio_zero_hover.png) 0 0 no-repeat;
+}
+
+a.ist_support {
+	background: url(/images/ist.png) 0 0 no-repeat;
+	width: 234px;
+}
+
+a:hover.ist_support {
+	background: url(/images/ist_hover.png) 0 0 no-repeat;
+}
+
+a.aeist_support {
+	background: url(/images/aeist.png) 0 0 no-repeat;
+	width: 106px;
+}
+
+a:hover.aeist_support {
+	background: url(/images/aeist_hover.png) 0 0 no-repeat;
+}
+
+a.siuc_support {
+	background: url(/images/siuc.png) 0 0 no-repeat;
+	width: 150px;
+}
+
+a:hover.siuc_support {
+	background: url(/images/siuc_hover.png) 0 0 no-repeat;
+}
+
+a.bpi_support {
+	background: url(/images/bpi.png) 0 0 no-repeat;
+	width: 100px;
+}
+
+a:hover.bpi_support {
+	background: url(/images/bpi_hover.png) 0 0 no-repeat;
+}
+
+/** Google Map **/
+.sending_map {
+	width: 870px;
+	height: 720px;
+}
+
+.viewing_map {
+	width: 870px;
+	height: 720px;
+}
+
+
+/* autocomplete */
+div.auto_complete { 
+	width: 350px; 
+	background: #fff; 
+} 
+div.auto_complete ul { 
+	border:1px solid #888; 
+	margin:0; 
+	padding:0; 
+	width:100%; 
+	list-style-type:none; 
+} 
+div.auto_complete ul li { 
+	margin:0; 
+	padding:3px; 
+} 
+div.auto_complete ul li.selected { 
+	background-color: #ffb; 
+} 
+div.auto_complete ul strong.highlight { 
+	color: #800; 
+	margin:0; 
+	padding:0; 
+} 
+
+/** balloons **/
+div.balloon {
+	text-align: left;
+}
+
+div.balloon .title {
+	/*display: block;*/
+	font-weight: bold;
+}
+
+
+
+/* onion skinned drop shadows: http://www.alistapart.com/articles/onionskin/ */
+.wrap1, .wrap2, .wrap3 {
+	display:inline-table;
+	/* \*/ display:block;/**/
+}
+.wrap1 {
+	float:left;
+	background:url(../images/shadow.gif) right bottom no-repeat;
+}
+.wrap2 {
+	background:url(../images/corner_bl.gif) left bottom no-repeat;
+}
+.wrap3 {
+	padding:0 4px 4px 0;
+	background:url(../images/corner_tr.gif) right top no-repeat;
+}
+.wrap3 img {
+	display:block;
+}
+
+/* coming from scaffold.css */
+
+.fieldWithErrors {
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+#errorExplanation {
+	width: 400px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#errorExplanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#errorExplanation ul li {
+	font-size: 12px;
+	list-style: square;
+}
+
+div.uploadStatus {
+	margin: 5px;
+}
+
+div.progressBar {
+	margin: 5px;
+}
+
+div.progressBar div.border {
+	background-color: #fff;
+	border: 1px solid grey;
+	width: 100%;
+}
+
+div.progressBar div.background {
+	background-color: #333;
+	height: 18px;
+	width: 0%;
+}
+
+input.keeper {
+	display: none;
+}
+
+label.keeper {
+	display: none;
+}
+
+p.quote{
+	font-size:13px;
+}
+

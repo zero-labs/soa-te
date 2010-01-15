@@ -1,0 +1,97 @@
+/* CSS Tabs is licensed under Creative Commons Attribution 2.5 - http://creativecommons.org/licenses/by/2.5/ */
+
+/* general settings */
+ul#tabnav {
+	text-align: center; /* set to left, right or center */
+	margin: 1em 0 1em 0; /* set margins as desired */
+	border-bottom: 0.1em solid #000; /* set border COLOR as desired */
+	list-style-type: none;
+	padding: 5px 10px 4px 10px; /* THIRD number must change with respect to padding-top (X) below */
+	font-size: 14px;
+}
+
+/* do not change */
+ul#tabnav li {
+	display: inline;
+}
+
+/* settings for selected tab & link */
+body#home li#home_nav a,
+body#sound li#sound_nav a, 
+body#new_sound li#new_sound_nav a, 
+body#day li#day_nav a, 
+body#tags li#tags_nav a,
+body#derivatives li#derivatives_nav a { 
+	background-color: #fff; /* set selected tab background color as desired */
+	color: #000; /* set selected tab link color as desired */
+	position: relative;
+	top: 0px;
+	padding-top: 5px; /* must change with respect to padding (X) above and below */
+	
+	/* dz: these two lines were in a rule without a tags. wouldn't work. copied them here */
+	border-bottom: 1px solid #fff; /* set border color to page background color */
+	/*background-color: #fff;  set background color to match above border color */
+}
+
+
+ul#tabnav li a { /* settings for all tab links */
+	padding: 5px 10px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+	border: 1px solid #000; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+	background-color: #000; /* set unselected tab background color as desired */
+	color: #fff; /* set unselected tab link color as desired */
+	margin-right: 2px; /* set additional spacing between tabs as desired */
+	text-decoration: none;
+	border-bottom: none;
+}
+
+ul#tabnav a:hover { /* settings for hover effect */
+	background: #666; /* set desired hover color */
+	color: #fff;
+	border-bottom: 1px solid #000; /* set border color to page background color */
+}
+
+
+/**** Campi selection ****/
+
+/* general settings */
+ul#campi {
+	text-align: center; /* set to left, right or center */
+	margin: 0px 0 18px 0; /* set margins as desired */
+	list-style-type: none;
+	padding: 5px 10px 3px 10px; /* THIRD number must change with respect to padding-top (X) below */
+}
+
+/* do not change */
+ul#campi li {
+	display: inline;
+}
+
+/* settings for selected tab & link */
+div#alameda li#alameda_pick a,
+div#tagus li#tagus_pick a { 
+	background-color: #000; /* set selected tab background color as desired */
+	color: #fff; /* set selected tab link color as desired */
+	position: relative;
+	top: 0px;
+	padding-top: 5px; /* must change with respect to padding (X) above and below */
+	
+	/* dz: these two lines were in a rule without a tags. wouldn't work. copied them here */
+	border-bottom: 5px solid #D9B800; /* set border color to page background color */
+}
+
+
+ul#campi li a { /* settings for all tab links */
+	font-size: 14px;
+	padding: 5px 10px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+	background-color: #fff; /* set unselected tab background color as desired */
+	color: #000; /* set unselected tab link color as desired */
+	margin-right: 18px; /* set additional spacing between tabs as desired */
+	text-decoration: none;
+	border-bottom: none;
+}
+
+ul#campi a:hover { /* settings for hover effect */
+	background: #666; /* set desired hover color */
+	color: #fff;
+	border-bottom: 5px solid #000; /* set border color to page background color */
+}

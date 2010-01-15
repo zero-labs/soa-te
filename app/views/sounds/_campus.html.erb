@@ -1,0 +1,30 @@
+<script type="text/javascript">
+//<![CDATA[
+
+function moveMap(latitude, longitude, zoom) {
+	map.setCenter(new GLatLng(latitude, longitude), zoom);
+	if (placed_marker != null) {
+		map.clearOverlays();
+		placed_marker = false;
+	}
+}
+
+//]]>
+</script>
+
+<div id="<%= session[:campus] %>">
+	<ul id="campi">
+		<li id="alameda_pick">
+			<%= link_to_remote "Alameda", :url => { :action => 'toggle_campus', :campus => 'alameda'} %>
+		</li>
+		<li id="tagus_pick">
+			<%= link_to_remote "Tagus Park", :url => { :action => 'toggle_campus', :campus => 'tagus' } %>
+		</li>
+	</ul>	
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+moveMap(<%= "#{session[:center]}" %>, <%= "#{session[:zoom]}" %>);
+//]]>
+</script>

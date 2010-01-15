@@ -1,0 +1,6 @@
+.DS_Store
+mongrel_cluster.yml
+*.log
+*.sqlite3
+deploy.rb
+tmp/*
