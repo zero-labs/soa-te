@@ -6,10 +6,14 @@ It allows users to catalogue (through regular and geographical tags) and upload 
 
 == Requirements
 
-* uuidtools
-gem install uuidtools
+* uuidtools: gem install uuidtools
 
-* xspf
-gem install xspf
+* xspf: gem install xspf
 
 == Configuration
+
+You should change the following values in config/environment.rb
+
+* google_key: use a value generated for your site (for development, it's set for http://localhost)
+* folder: where sound files should be stored
+* folder_url: where sound files should be publicly accessible as URL (no need to make changes for development)
